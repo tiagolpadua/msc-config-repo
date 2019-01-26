@@ -1,0 +1,22 @@
+spring.application.name=livros-service
+server.port=8082
+
+eureka.client.region = default
+eureka.client.registryFetchIntervalSeconds = 5
+# eureka.client.serviceUrl.defaultZone=http://localhost:8083/eureka/
+# eureka.client.serviceUrl.defaultZone=http://192.168.1.5:8083/eureka/
+
+ribbon.ReadTimeout=1000
+ribbon.ConnectTimeout=5000
+ribbon.MaxAutoRetries=10
+ribbon.MaxAutoRetriesNextServer=10
+
+management.endpoints.web.exposure.include=*
+logging.file=book-service.log
+# logging.level.root=DEBUG
+
+keycloak.auth-server-url=http://localhost:8080/auth
+keycloak.realm=bookstore
+keycloak.resource=bookservice
+keycloak.public-client=true
+keycloak.use-resource-role-mappings=true
