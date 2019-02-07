@@ -15,3 +15,8 @@ spring:
         uri: lb://avaliacao-service
         predicates:
         - Path=/avaliacoes
+      - id: admin_route
+#        uri: http://localhost:8081
+        uri: lb://admin
+        predicates:
+        - Path=/admin
