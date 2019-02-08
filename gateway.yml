@@ -9,14 +9,9 @@ spring:
 #        uri: http://localhost:8080
         uri: lb://livro-service
         predicates:
-        - Path=/livros/{segment}
+        - Path=/livros/**
       - id: avalicacao_service_route
 #        uri: http://localhost:8081
         uri: lb://avaliacao-service
         predicates:
-        - Path=/avaliacoes/{segment}
-      - id: admin_route
-#        uri: http://localhost:8081
-        uri: lb://admin
-        predicates:
-        - Path=/admin/{segment}
+        - Path=/avaliacoes/**
